@@ -1,0 +1,124 @@
+* {
+  box-sizing:border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+*:before,
+*:after {
+	box-sizing:border-box;
+}
+
+html{
+    height: 100%;
+    -ms-text-size-adjust: 100%;
+  	-webkit-text-size-adjust: 100%;
+  	box-sizing: border-box;
+}
+
+
+*:focus {
+	outline: none;
+	-moz-outline-style: none;
+}
+
+:-moz-any-link:focus {
+	outline: 1px dotted invert;
+}
+
+:-moz-any-link:focus {
+	outline: none;
+}
+
+textarea,input {
+	box-shadow:none;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+a{
+	transition: color 0.3s linear;
+	text-decoration: none;
+	&:not([class]){
+		color: #3D88FF;
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+		transition: all .2s ease;
+		&:hover{
+			border-bottom: 1px solid rgba(61, 136, 255, 0.2);
+		}
+	}
+}
+
+
+body {
+	margin: 0;
+	height: 100%;
+	background: $default-site-bg;
+	-webkit-font-smoothing: antialiased;
+	font-size: $default-size-font;
+	font-family: $default-font;
+	color: $base-color;
+	font-weight: 300;
+	display: flex;
+  	flex-direction: column;
+  	&.fixed{
+  		overflow: hidden;
+  	}
+}
+
+textarea,input {
+	box-shadow: none;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+
+::-webkit-input-placeholder {color:#a5a8ab;transition:all 0.3s ease;}
+::-moz-placeholder          {color:#a5a8ab;transition:all 0.3s ease;}
+:-moz-placeholder           {color:#a5a8ab;transition:all 0.3s ease;}
+:-ms-input-placeholder      {color:#a5a8ab;transition:all 0.3s ease;}
+
+
+
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
+
+
+
+@font-face {
+    font-family: 'circleregular';
+    src: url('../fonts/circle/circle-regular/circle-regular.svg');
+    src: url('../fonts/circle/circle-regular/circle-regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/circle/circle-regular/circle-regular.woff2') format('woff2'),
+        url('../fonts/circle/circle-regular/circle-regular.woff') format('woff'),
+        url('../fonts/circle/circle-regular/circle-regular.ttf') format('truetype'),
+        url('../fonts/circle/circle-regular/circle-regular.svg#circleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.layout{
+  	flex: 1 0 auto;
+}
+
+
+.wrapper{
+
+}
+.container-fluid{
+	width: 100%;
+	max-width: 1920px;
+    padding: 0 40px;
+	position: relative;
+	margin: 0 auto;
+}
+
+
+.page-content{
+	padding: 20px 0;
+}
+
