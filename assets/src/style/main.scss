@@ -2,6 +2,7 @@
 
 // Подключение нужных SCSS исходников Bootstrap
 @import "bootstrap/normalize";
+@import "bootstrap/grid";
 
 @import "components/body";
 @import "components/workarea";
@@ -13,6 +14,7 @@
 
 //PAGES
 @import "pages/index";
+@import "pages/news";
 
 //COMPONENTS
 @import "components/footer";

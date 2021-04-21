@@ -9,6 +9,7 @@ $('body').append(
 	</style> \
 	<ol id="pages"> \
 		<li><a href="index.html">Index</a></li> \
-		<li><a href="article.html">Article</a></li> \
+		<li><a href="news.html">News</a></li> \
+		<li><a href="news-in.html">News-in</a></li> \
 	</ol> \
 </div>');
