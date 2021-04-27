@@ -62,6 +62,17 @@
 
 .page-title{
 	margin-bottom: 58px;
+    &.m-component{
+        display: flex;
+        align-items: center;
+    }
+}
+.page-title__icon{
+    margin-left: 55px;
+    .page-title-aft{
+        margin-left: 40px;
+        position: static;
+    }
 }
 .indented{
 	padding-left: 135px;
@@ -181,7 +192,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 60px;
+    margin-bottom: 43px;
 }
 .page-back {
     color: #e4002b;
@@ -238,3 +249,9 @@
         }
     }
 }
+
+.page-title__pre{
+    display: block;
+    font-size: 36px;
+}
+

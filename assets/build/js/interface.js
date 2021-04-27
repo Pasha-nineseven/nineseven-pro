@@ -11,6 +11,25 @@ $(document).ready(function() {
         $(this).parents('.top-nav__item').toggleClass('toggled');
 	});
 
+	$("body").on("click", ".top-nav.active .top-nav__item.m-sub-service .top-nav-toggle", function(e){
+		$(this).parents('.top-nav__item').find('.submenu-services').slideToggle();
+        $(this).parents('.top-nav__item').toggleClass('toggled');
+	});
+
+
+	//LANG
+	$('body').on('click','.js-lang-toggle', function(e){
+        e.preventDefault();
+		$(this).parents('.page-header-lang').toggleClass('active');
+    });
+	$(document).click(function (e){
+		var div = $(".page-header-lang");
+		if (!div.is(e.target)
+		    && div.has(e.target).length === 0) {
+			$('.page-header-lang').removeClass('active');
+		}
+	});
+
 	//INDUSTRIES-SLIDER
     if ($( ".industries-slider" ).length>0) {
         var $slider_i = $('.industries-slider');
@@ -24,28 +43,31 @@ $(document).ready(function() {
             adaptiveHeight: false,
             // variableWidth: true,
             centerMode:true,
-            //speed: 250,
-            autoplay: true,
+            //autoplay: true,
             autoplaySpeed: 3500,
         });
     };
 
 	if($('.success-slider').length>0){
-		var currentSlide;
+		var currentSlide_s;
   		var slidesCount;
-		var sliderCounter = $('.success-slider-counter__in');
+		var sliderCounter_s = $('.success-slider-counter__in');
 		var $slider_s = $('.success-slider');
-		var updateSliderCounter = function(slick, currentIndex) {
-			currentSlide = slick.slickCurrentSlide() + 1;
+		var updateSliderCounter_s = function(slick, currentIndex) {
+			currentSlide_s = slick.slickCurrentSlide() + 1;
 			slidesCount = slick.slideCount;
-			$(sliderCounter).text(currentSlide + '/' +slidesCount)
+			$(sliderCounter_s).text(currentSlide_s + '/' +slidesCount)
+			
 		};
 
 		$slider_s.on('init', function(event, slick) {
-			updateSliderCounter(slick);
+			updateSliderCounter_s(slick);
+			console.log(currentSlide_s)
 		});
-		$slider_s.on('afterChange', function(event, slick, currentSlide) {
-			updateSliderCounter(slick, currentSlide);
+		$slider_s.on('afterChange', function(event, slick, currentSlide_s) {
+			updateSliderCounter_s(slick, currentSlide_s);
+			console.log(currentSlide_s)
+			
 		});
 
         $slider_s.slick({
@@ -150,4 +172,16 @@ $(document).ready(function() {
         //     $('.slick-dots').hide();
         // }
     };
+
+
+	//POPUP-VIDEO
+    $(".js-play-btn").fancybox({
+        speed : 330,
+        transitionEffect: "slide", 
+        animationEffect: "zoom-in-out", 
+        infobar: false,
+        buttons: [
+            "close"
+        ],
+    });
 });

@@ -1,0 +1,119 @@
+.service-pre{
+    font-size: 48px;
+    margin-bottom: 63px;
+    font-family: 'Montserrat', sans-serif;
+    color: #011C26;
+    max-width: 1030px;
+    line-height: 1.2;
+}
+
+.service-more{
+    margin: 0 -135px 80px;
+    padding: 55px 135px 60px 135px;
+    background: #F2F2F2;
+    border-radius: 8px;
+    display: flex;
+}
+.service-more__pre{
+    width: 380px;
+    min-width: 380px;
+    margin-right: 20px;
+    font-size: 36px;
+    color: #011C26;
+    font-family: 'Montserrat', sans-serif;
+    span{
+        font-size: 36px;
+        color: #e4002b;
+        font-family: caveat;
+        font-weight: 700;
+        line-height: 1;
+        display: block;
+        padding-left: 38px;
+    }
+}
+
+.service-more__txt{
+    max-width: 772px;
+    padding-top: 7px;
+}
+
+.service-title{
+    color: #011C26;
+    font-size: 64px;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+    span{
+        font-size: 64px;
+        color: #e4002b;
+        font-family: caveat;
+        font-weight: 700;
+        line-height: 1;
+        display: block;
+        padding-left: 56px;
+    }
+}
+
+.specialize{
+    margin-bottom: 128px;
+}
+
+.specialize__list{
+    display: flex;
+    flex-wrap:wrap;
+}
+.specialize__item{
+    width: 33.333%;
+    border: 1px solid #C4C4C4;
+    margin: 0 -1px -1px 0;
+}
+
+.specialize__link{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition: all .3s ease;
+    padding: 32px 60px 82px 41px;
+    color: #011C26;
+    overflow: hidden;
+    position: relative;
+    &:hover{
+        background: #011C26;
+        color: #fff;
+        .specialize__txt{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+.specialize__txt{
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity .2s ease ,transform .5s ease;
+}
+.specialize__top{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    line-height: 1.2;
+    padding-left: 92px;
+    position: relative;
+    margin-bottom: 11px;
+    &:before{
+        content: "";
+        width: 69px;
+        height: 2px;
+        background: #E4002B;
+        position: absolute;
+        left: 0;
+        top: 21px;
+    }
+}
+.specialize__icon{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    img{
+        display: block;
+    }
+}

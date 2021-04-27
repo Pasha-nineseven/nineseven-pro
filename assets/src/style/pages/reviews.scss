@@ -1,0 +1,75 @@
+.reviews{
+    
+}
+.reviews__item{
+    margin-bottom: 108px;
+    display: flex;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.reviews__pre{
+    width: 534px;
+    min-width: 534px;
+    padding-right: 30px;
+}
+.reviews__img{
+    margin-bottom: 17px;
+    width: 370px;
+}
+.reviews__person{
+    font-size: 36px;
+    color: #011C26;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 11px;
+    width: 370px;
+}
+.reviews__pos{
+    font-size: 24px;
+    width: 370px;
+}
+
+.reviews-info__top{
+    background: #011c26;
+    border-radius: 8px;
+    color: #fff;
+    margin-bottom: 26px;
+    padding: 33px 33px 47px;
+}
+
+.reviews-info__add{
+
+}
+.reviews-txt{
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+}
+.reviews-rate{
+    margin-bottom: 11px;
+    display: flex;
+    align-items: center;
+}
+.reviews-rate__num{
+    margin-right: 8px;
+    font-size: 24px;
+}
+.reviews-rating{
+    display: flex;
+    align-items: center;
+}
+.reviews-rating__item{
+    width: 14px;
+    height: 14px;
+    background: url(../img/svg/star.svg) center no-repeat;
+    margin-right: 2px;
+    &:last-child{
+        margin-right: 0;
+        background-size: 14px 14px;
+    }
+    &.m-fill{
+        background: url(../img/svg/star-fill.svg) center no-repeat;
+        background-size: 15px 15px;
+    }
+}

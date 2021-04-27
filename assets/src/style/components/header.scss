@@ -29,6 +29,7 @@
 .page-header__prev{
     display: flex;
     align-items: center;
+	position: relative;
 }
 .page-header__next{
     display: flex;
@@ -63,7 +64,8 @@
 			}
 		}
 	}
-	&.m-sub{
+	&.m-sub,
+	&.m-sub-service{
 		.top-nav__link{
 			&:after{
 				content: "";
@@ -92,7 +94,19 @@
 			}
 		}
 	}
+	&.m-sub-service{
+		&:hover{
+			.submenu-services{
+				pointer-events: all;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		
+	}
 }
+
+
 
 .top-nav__link{
 	display: flex;
@@ -110,14 +124,16 @@
 	position: absolute;
 	top: 100%;
 	left: 0;
-	padding: 10px;
+	padding: 20px 10px;
     margin-left: -10px;
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
 	transition: opacity .3s ease;
 	background: #fff;
-    min-width: 100%;
+	box-shadow: 0 4px 4px 0 #00000066;
+    border-radius: 8px;
+    min-width: 195px;
 }
 .submenu__link{
 	display: block;
@@ -287,4 +303,91 @@
 	font-size: 18px;
 	line-height: 28px;
 	color: #000;
+}
+
+.m-sub-service{
+	position: static;
+}
+.submenu-services{
+	border-radius: 8px;
+	position: absolute;
+    left: -27px;
+    top: calc(100% + 26px);
+	box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.25);
+	opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .3s ease;
+	&:before{
+		content: "";
+		display: block;
+		width: 100px;
+		height: 40px;
+		position: absolute;
+		left: 135px;
+    	bottom: 100%;
+	}
+}
+.submenu-services__wrap{
+	display: flex;
+	width: 1172px;
+}
+.submenu-services__item{
+	width: 50%;
+	border-radius: 8px;
+	padding: 51px 128px 69px 134px;
+	position: relative;
+	overflow: hidden;
+	&.m-magento{
+		background: #F2F2F2;
+		.submenu-services__link{
+			color: #011C26;
+			&:hover{
+				color: #e4002b;
+			}
+		}
+	}
+	&.m-other{
+		background: #011C26;
+		color: #fff;
+		z-index: 1;
+		padding-left: 90px;
+		.submenu-services__link{
+			color: #fff;
+			&:hover{
+				color: #e4002b;
+			}
+		}
+	}
+}
+
+.submenu-services__top{
+	font-size: 36px;
+	margin-bottom: 34px;
+}
+.submenu-services__link{
+	font-size: 24px;
+	font-family: 'circlelight';
+	display: block;
+	margin-bottom: 15px;
+	&:last-child{
+		margin-bottom: 0;
+	}
+	
+}
+
+.submenu-services__img{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	img{
+		display: block;
+	}
+}
+
+.submenu-services__top,
+.submenu-services__link{
+	position: relative;
+	z-index: 1;
 }

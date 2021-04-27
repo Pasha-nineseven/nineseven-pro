@@ -1,0 +1,46 @@
+.cases__list{
+    column-count: 2;
+    margin-right: -30px;
+    column-gap: 0;
+    overflow: hidden; /* Fix for firefox and IE 10-11  */
+    -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+    page-break-inside: avoid; /* Firefox */
+    break-inside: avoid; /* IE 10+ */
+    break-inside: avoid-column;
+    break-inside: avoid;
+}
+.cases__item{
+    // width: 50%;
+    padding-right: 30px;
+    margin-bottom: 56px;
+    break-inside: avoid;
+    &.m-large{
+        .cases__img{
+            height: 1300px;
+        }
+    }
+}
+.cases__in{
+    width: 100%;
+    height: 100%;
+}
+.cases__img{
+    height: 650px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 53px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.cases__link{
+    font-size: 24px;
+    color: #E4002B;
+    margin-bottom: 16px;
+}
+.cases__title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    line-height: 1.26;
+    color: #011C26;
+}
